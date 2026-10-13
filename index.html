@@ -59,7 +59,7 @@
             </nav>
 
             <!-- Consolidated Single CTA Button -->
-            <a href="#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-md border border-purple-400/20 transition-all hover:scale-105">
+            <a href="#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-md border border-purple-400/30">
                 Contact Leasing
             </a>
         </div>
@@ -95,7 +95,7 @@
 
             <div class="mt-10 flex items-center justify-center">
                 <!-- Consolidated Primary Action Button -->
-                <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-xl border border-purple-400/30 transition-all flex items-center justify-center gap-2 hover:scale-105">
+                <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-xl border border-purple-400/30">
                     <i class="fa-solid fa-envelope"></i> Contact Leasing Office
                 </a>
             </div>
@@ -117,7 +117,7 @@
                     </h2>
                     
                     <p class="text-slate-600 leading-relaxed text-base">
-                        At <strong class="text-purpleTheme-primary font-semibold">1530 Downing Street</strong>, we pride ourselves on offering a residence experience that larger corporate management firms simply cannot match. As a locally based, family-owned business, we care deeply about our building, our neighbors, and every individual tenant who calls this property home.
+                        At <strong class="text-purpleTheme-primary font-semibold">1530 Downing Street</strong>, we pride ourselves on offering a residence experience that larger corporate management companies simply cannot match.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
@@ -153,7 +153,7 @@
                         <h3 class="font-serif-title text-2xl font-bold text-white">Prime Location in Denver</h3>
                         
                         <p class="text-slate-300 text-sm leading-relaxed">
-                            Situated right on Downing Street between Colfax and 16th Avenue, you are in the heart of Denver's most vibrant, historic corridor with quick access to Cheesman Park, downtown, and public transport.
+                            Situated right on Downing Street between Colfax and 16th Avenue, you are in the heart of Denver's most vibrant, historic corridor with quick access to Cheesman Park, downtown, and the city's best local amenities.
                         </p>
 
                         <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-purple-300 font-medium">
@@ -336,7 +336,7 @@
                                 id="tenantName" 
                                 required 
                                 placeholder="e.g. Alex Morgan"
-                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
                             >
                         </div>
 
@@ -350,7 +350,7 @@
                                 id="tenantPhone" 
                                 required 
                                 placeholder="e.g. (303) 555-0199"
-                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
                             >
                         </div>
                     </div>
@@ -365,7 +365,7 @@
                             id="tenantEmail" 
                             required 
                             placeholder="e.g. alex@example.com"
-                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
+                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
                         >
                     </div>
 
@@ -379,14 +379,14 @@
                             rows="4" 
                             required 
                             placeholder="Tell us your target move-in date, bedroom preference, or any questions..."
-                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
+                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
                         ></textarea>
                     </div>
 
                     <!-- Submit Button -->
                     <button 
                         type="submit" 
-                        class="w-full py-4 rounded-xl bg-purpleTheme-primary hover:bg-purpleTheme-vibrant text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg border border-purple-400/30 flex items-center justify-center gap-2 hover:scale-[1.01]"
+                        class="w-full py-4 rounded-xl bg-purpleTheme-primary hover:bg-purpleTheme-vibrant text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg border border-purple-500/30"
                     >
                         <i class="fa-solid fa-paper-plane"></i> Send Message to Owners
                     </button>
@@ -437,7 +437,7 @@
             
             const confirmBox = document.getElementById('formSuccessMessage');
             document.getElementById('confirmationDetails').innerText = 
-                `Thank you ${name}! We received your inquiry and our family team will email you at ${email} shorty.`;
+                `Thank you ${name}! We received your inquiry and our family team will email you at ${email} shortly.`;
             
             confirmBox.classList.remove('hidden');
         }
