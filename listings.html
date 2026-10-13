@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Listings | HIG Properties</title>
+    
+    <!-- ======================================================================= -->
+    <!-- SAME STYLING AS THE HOMEPAGE                                            -->
+    <!-- ======================================================================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- ======================================================================= -->
+    <!-- NAVIGATION                                                              -->
+    <!-- Home and Contact go back to index.html.                                 -->
+    <!-- ======================================================================= -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-purple-900/40 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-700 flex items-center justify-center font-serif-title font-bold text-lg text-white shadow-md">HIG</div>
+                <div class="flex flex-col">
+                    <span class="font-serif-title text-lg font-bold tracking-wider text-purple-100 uppercase leading-none">HIG Properties</span>
+                    <span class="text-[10px] tracking-[0.2em] text-purple-300 uppercase font-medium mt-1">Denver, CO</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+                <a href="index.html" class="hover:text-purple-300 transition-colors">Home</a>
+                <a href="listings.html" class="text-purple-300">Open Listings</a>
+                <a href="index.html#about" class="hover:text-purple-300 transition-colors">About Us</a>
+            </nav>
+
+            <a href="index.html#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-md transition-colors">
+                Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- ======================================================================= -->
+    <!-- PAGE TITLE                                                              -->
+    <!-- ======================================================================= -->
+    <section class="pt-32 pb-12 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-xs font-bold tracking-widest text-purple-300 uppercase">HIG Properties</p>
+            <h1 class="font-serif-title text-4xl sm:text-5xl font-bold mt-2">Open Listings</h1>
+            <p class="text-slate-300 mt-4 max-w-2xl">Currently available: Downing Place Apartments at 1530 Downing Street and a remodeled Victorian home at 1540 Downing Street.</p>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- LISTING 1: 1530 DOWNING STREET  (APARTMENT BUILDING)                    -->
+    <!--                                                                         -->
+    <!-- WHAT TO EDIT ON THIS LISTING:                                           -->
+    <!-- 1. Photos: change each img src to a file in this folder                 -->
+    <!--    Example: src="1530-front.jpg"                                        -->
+    <!-- 2. Amenities: add/remove items in the <ul> list                         -->
+    <!-- 3. Google Maps: the maps link uses the building address                 -->
+    <!-- ======================================================================= -->
+    <section id="listing-1530" class="py-20 bg-white border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                <!-- PHOTOS for 1530: 1530-n-downing-st.jpg and 1530-n-downing-st-parking.jpg -->
+                <div class="space-y-4">
+                    <img
+                        src="1530-n-downing-st.jpg"
+                        alt="Downing Place Apartments at 1530 Downing Street"
+                        class="w-full h-80 object-cover rounded-3xl shadow-lg"
+                    >
+                    <img
+                        src="1530-n-downing-st-parking.jpg"
+                        alt="Off-street parking at 1530 Downing Street"
+                        class="w-full h-56 object-cover object-top rounded-2xl"
+                    >
+                </div>
+
+                <!-- TEXT for 1530 — edit the paragraphs and lists below to change listing details -->
+                <div class="space-y-6">
+                    <p class="text-xs font-bold uppercase tracking-wider text-purple-700">Apartment Building • 19 Units</p>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-slate-900">Downing Place Apartments</h2>
+                    <p class="text-sm text-slate-500">1530 Downing Street at Colfax Avenue • Historic Denver Capitol Hill</p>
+
+                    <p class="text-slate-600 leading-relaxed">
+                        Downing Place Apartments in the historic Denver Capitol Hill. Downing Street and Colfax Avenue. Entrance to the front of the building is controlled by an electronic security system. Our small family owned and operated three level smoke free property contains 19 units with studio, one bedroom and two bedroom apartments.
+                    </p>
+
+                    <!-- UTILITIES — update dollar amounts here each year -->
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Utilities</h3>
+                        <p class="text-slate-600 leading-relaxed mt-2">
+                            2025 minimum monthly bill was $61, maximum $86 (trash, water/sewer, gas). Xcel metered electricity (refrigerator, lights, personal electronics, etc.) is paid by the tenant.
+                        </p>
+                    </div>
+
+                    <!-- AMENITIES — add or remove lines in this list -->
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Amenities</h3>
+                        <ul class="space-y-2 text-sm text-slate-700 mt-2">
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Spacious exercise room</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Laundry facility for tenants</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Secured sports equipment storage for large items such as a bike</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Electronic security system at the front entrance</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Smoke-free three-level building</li>
+                        </ul>
+                    </div>
+
+                    <!-- PARKING -->
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Parking</h3>
+                        <p class="text-slate-600 leading-relaxed mt-2">
+                            Off-street parking is available alongside the building. Six months free off-street parking per vehicle.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=1530+Downing+St,+Denver,+CO+80218" target="_blank" rel="noopener noreferrer" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-purple-800 bg-purple-100 hover:bg-purple-200 rounded-xl">
+                            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                        </a>
+                        <a href="index.html#contact" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl">
+                            <i class="fa-solid fa-envelope"></i> Inquire about 1530
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- LISTING 2: 1540 DOWNING STREET  (HOUSE)                                 -->
+    <!--                                                                         -->
+    <!-- WHAT TO EDIT ON THIS LISTING:                                           -->
+    <!-- 1. Photos: change each img src to a 1540 photo filename                 -->
+    <!-- 2. Description: edit the paragraphs in the TEXT column                  -->
+    <!-- 3. Address/maps link if the ZIP or street number changes                -->
+    <!-- ======================================================================= -->
+    <section id="listing-1540" class="py-20 bg-purple-50/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                <!-- PHOTOS for 1540: 1540 (2).jpeg (street view) and 1540 (1).jpeg (porch and garden) -->
+                <div class="space-y-4 lg:order-2">
+                    <img
+                        src="1540%20(2).jpeg"
+                        alt="1540 Downing Street Victorian home exterior"
+                        class="w-full h-80 object-cover object-top rounded-3xl shadow-lg"
+                    >
+                    <img
+                        src="1540%20(1).jpeg"
+                        alt="1540 Downing Street front porch and cottage garden"
+                        class="w-full h-56 object-cover object-top rounded-2xl"
+                    >
+                </div>
+
+                <!-- TEXT for 1540 -->
+                <div class="space-y-6 lg:order-1">
+                    <p class="text-xs font-bold uppercase tracking-wider text-purple-700">House</p>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-slate-900">1540 Downing Street</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Historic Denver character meets thoughtful modern updates in this beautifully remodeled two-story Victorian home. Rich architectural details including custom crown molding, stained and leaded glass windows, solid wood doors and trim, Victorian-style hardware, and ceiling rosettes bring warmth and personality throughout, while updated LVT flooring offers easy everyday living.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        The main level features a welcoming living room with an electric insert set within the original fireplace, a spacious dining room, and an additional TV room or home office. The large kitchen offers generous wood cabinetry, stainless steel appliances, and plenty of space for cooking and gathering. A charming Victorian-inspired guest bath completes the main level. Upstairs, the generously sized primary suite and additional bedrooms are conveniently located near the second-floor laundry. Additional features include an evaporative cooler, central vacuum system, ceiling fans, and abundant character throughout.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Outdoor spaces are equally inviting. Relax on the classic front porch overlooking a charming cottage garden, or enjoy the large covered back deck with a gas fireplace — an ideal extension of the living space for relaxing or entertaining. A small fully fenced yard and two off-street parking spaces add everyday convenience. This distinctive home offers a rare opportunity to enjoy the charm and craftsmanship of a historic Denver residence with the updates and functionality of modern living.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=1540+Downing+St,+Denver,+CO+80218" target="_blank" rel="noopener noreferrer" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-purple-800 bg-purple-100 hover:bg-purple-200 rounded-xl">
+                            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                        </a>
+                        <a href="index.html#contact" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl">
+                            <i class="fa-solid fa-envelope"></i> Inquire about 1540
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="font-serif-title font-bold text-slate-200">HIG Properties</p>
+            <p class="text-[11px] text-slate-500">© 2026 HIG Properties. Equal Housing Opportunity.</p>
+        </div>
+    </footer>
+</body>
+</html>
