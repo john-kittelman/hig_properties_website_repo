@@ -4,45 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1530 Downing Street Apartments | North Capitol Hill, Denver</title>
-    <!-- Tailwind CSS CDN -->
+    
+    <!-- ======================================================================= -->
+    <!-- EXTERNAL STYLESHEETS & SCRIPTS                                          -->
+    <!-- Tailwind CSS for styling layout/colors, FontAwesome for icons.           -->
+    <!-- ======================================================================= -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        purpleTheme: {
-                            deep: '#1e1b2e',       // Soft Dark Slate Violet
-                            plum: '#312e81',       // Soft Indigo-Purple
-                            primary: '#6b21a8',    // Balanced Warm Purple
-                            vibrant: '#7e22ce',    // Vibrant Accent
-                            softBg: '#fbfaff',     // Soft Neutral Lavender Tint
-                            cardBg: '#1e1b4b'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'Georgia', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif-title { font-family: 'Playfair Display', Georgia, serif; }
     </style>
 </head>
-<body class="bg-purpleTheme-softBg text-slate-800 antialiased selection:bg-purpleTheme-primary selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
+    <!-- ======================================================================= -->
+    <!-- NAVIGATION BAR (Fixed at the top of the screen)                         -->
+    <!-- To change link names or add new tabs, edit the text inside <a> tags.    -->
+    <!-- ======================================================================= -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-purple-900/40 text-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
+            
+            <!-- Logo & Building Title -->
             <a href="#" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-purpleTheme-primary flex items-center justify-center font-serif-title font-bold text-lg text-white shadow-md border border-purple-400/30">
+                <div class="w-10 h-10 rounded-xl bg-purple-700 flex items-center justify-center font-serif-title font-bold text-lg text-white shadow-md">
                     1530
                 </div>
                 <div class="flex flex-col">
@@ -51,64 +38,73 @@
                 </div>
             </a>
 
-            <!-- Navigation Links -->
+            <!-- Navigation Links (Jumps down to sections by ID) -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
                 <a href="#hero" class="hover:text-purple-300 transition-colors">Home</a>
                 <a href="#about" class="hover:text-purple-300 transition-colors">About Us</a>
                 <a href="#neighborhood" class="hover:text-purple-300 transition-colors">Neighborhood</a>
             </nav>
 
-            <!-- Consolidated Single CTA Button -->
-            <a href="#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-md border border-purple-400/30">
-                Contact Leasing
+            <!-- Top Right Contact CTA Button -->
+            <a href="#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-md transition-colors">
+                Contact
             </a>
         </div>
     </header>
 
+    <!-- ======================================================================= -->
+    <!-- HERO SECTION (Top banner with background image and main headline)      -->
+    <!-- To change the background image, edit the 'src' link in the <img> tag.   -->
+    <!-- ======================================================================= -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center bg-slate-950 text-white pt-20 overflow-hidden">
         
-        <!-- BACKGROUND APARTMENT IMAGE - Purple overlay removed, clean dark vignette applied -->
+        <!-- Background Image Container -->
         <div class="absolute inset-0 z-0">
             <img 
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=80" 
                 alt="1530 Downing Street Apartments" 
                 class="w-full h-full object-cover object-center"
-                id="heroApartmentImg"
             >
-            <!-- Minimal gradient overlay for crisp readability without discoloration -->
+            <!-- Dark gradient overlay to make text easy to read over the image -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-slate-950/20"></div>
         </div>
 
-        <!-- Hero Content Overlay -->
+        <!-- Hero Text & Button -->
         <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-900/80 text-purple-200 border border-purple-500/30 backdrop-blur-md mb-6 shadow-md">
                 <i class="fa-solid fa-location-dot text-purple-400"></i> 1530 Downing St, Denver, CO 80218
             </div>
 
+            <!-- Main Headline -->
             <h1 class="font-serif-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight drop-shadow-lg">
                 Welcome Home to <br><span class="text-purple-200">1530 Downing Street</span>
             </h1>
 
+            <!-- Subtitle Description -->
             <p class="mt-6 text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
                 A warm, family-owned apartment community located in Denver's historic North Capitol Hill neighborhood. Modern comfort with personal, local care.
             </p>
 
+            <!-- Hero Button -->
             <div class="mt-10 flex items-center justify-center">
-                <!-- Consolidated Primary Action Button -->
-                <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-xl border border-purple-400/30">
-                    <i class="fa-solid fa-envelope"></i> Contact Leasing Office
+                <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-xl transition-colors">
+                    <i class="fa-solid fa-envelope"></i> Contact Office
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-white text-slate-900 border-b border-purple-100 relative">
+    <!-- ======================================================================= -->
+    <!-- ABOUT US SECTION (Highlights family-owned business and local details)    -->
+    <!-- To change the family photo, replace 'family%20photo.jpg' with your file.-->
+    <!-- ======================================================================= -->
+    <section id="about" class="py-24 bg-white text-slate-900 border-b border-purple-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Text Content -->
+                <!-- Left Column: Story & Family Photo -->
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purpleTheme-primary uppercase tracking-wider">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-800 uppercase tracking-wider">
                         <i class="fa-solid fa-house-chimney-user"></i> Family Owned & Operated
                     </div>
                     
@@ -117,35 +113,22 @@
                     </h2>
                     
                     <p class="text-slate-600 leading-relaxed text-base">
-                        At <strong class="text-purpleTheme-primary font-semibold">1530 Downing Street</strong>, we pride ourselves on offering a residence experience that larger corporate management companies simply cannot match.
+                        At <strong class="text-purple-700 font-semibold">1530 Downing Street</strong>, we pride ourselves on offering a residence experience that larger corporate management companies simply cannot match.
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                        <div class="p-5 rounded-2xl bg-purpleTheme-softBg border border-purple-100 flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-xl bg-purpleTheme-primary text-white flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                <i class="fa-solid fa-handshake font-bold"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-serif-title font-bold text-slate-900 text-base">Direct Communication</h3>
-                                <p class="text-xs text-slate-600 mt-1">Speak directly with owners who genuinely care about your comfort and satisfaction.</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 rounded-2xl bg-purpleTheme-softBg border border-purple-100 flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-xl bg-purpleTheme-primary text-white flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-serif-title font-bold text-slate-900 text-base">Attentive Maintenance</h3>
-                                <p class="text-xs text-slate-600 mt-1">Prompt, dedicated attention to repairs and property upkeep year-round.</p>
-                            </div>
-                        </div>
+                    <!-- Family Photo Element -->
+                    <div class="pt-2">
+                        <img
+                            src="family%20photo.jpg"
+                            alt="The family that owns and operates 1530 Downing Street"
+                            class="w-full rounded-2xl shadow-lg border border-purple-100 object-cover object-center"
+                        >
                     </div>
                 </div>
 
-                <!-- Highlight Box -->
+                <!-- Right Column: Location Highlight Box -->
                 <div class="lg:col-span-5">
-                    <div class="bg-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl border border-purple-900/40 space-y-6 relative overflow-hidden">
+                    <div class="bg-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl border border-purple-900/40 space-y-6">
                         <div class="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-2xl text-purple-300">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
@@ -156,10 +139,15 @@
                             Situated right on Downing Street between Colfax and 16th Avenue, you are in the heart of Denver's most vibrant, historic corridor with quick access to Cheesman Park, downtown, and the city's best local amenities.
                         </p>
 
-                        <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-purple-300 font-medium">
-                            <span><i class="fa-solid fa-building text-purple-400"></i> Boutique Residence</span>
-                            <span><i class="fa-solid fa-paw text-purple-400"></i> Denver Living</span>
-                        </div>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=1530+Downing+St,+Denver,+CO+80218"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 pt-2 border-t border-slate-800 text-xs text-purple-300 font-medium hover:text-purple-200 transition-colors"
+                        >
+                            <i class="fa-solid fa-map-location-dot text-purple-400"></i>
+                            Open 1530 Downing St in Google Maps
+                        </a>
                     </div>
                 </div>
 
@@ -167,286 +155,75 @@
         </div>
     </section>
 
-    <section id="neighborhood" class="py-24 bg-purpleTheme-softBg border-b border-purple-200">
+    <!-- ======================================================================= -->
+    <!-- NEIGHBORHOOD HIGHLIGHTS GALLERY                                         -->
+    <!-- Displays local area photos (Cheesman Park, Botanic Gardens, Capitol, etc.)-->
+    <!-- ======================================================================= -->
+    <section id="neighborhood" class="py-24 bg-purple-50/50 border-b border-purple-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
+            <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold tracking-widest text-purpleTheme-primary uppercase">Explore Denver Around 1530 Downing</span>
+                <span class="text-xs font-bold tracking-widest text-purple-700 uppercase">Explore Denver Around 1530 Downing</span>
                 <h2 class="font-serif-title text-3xl sm:text-5xl font-bold text-slate-900 mt-2">Neighborhood Highlights</h2>
                 <p class="text-slate-600 mt-4 text-base leading-relaxed">
                     Live steps away from iconic Denver landmarks, pristine parks, cultural arts centers, and sports venues.
                 </p>
             </div>
 
-            <!-- Neighborhood Attached Photo Grid -->
+            <!-- Grid of 6 Neighborhood Photos -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Image 1: Cheesman Park Skyline -->
+                <!-- Card 1: Cheesman Park -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
                     <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="cheesman_park_image.jpg" 
-                            alt="Cheesman Park Denver Skyline View" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <img src="cheesman_park_image.jpg" alt="Cheesman Park" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
                             <i class="fa-solid fa-tree text-amber-300 mr-1"></i> Cheesman Park
                         </span>
                     </div>
                     <div class="p-5">
                         <h3 class="font-serif-title font-bold text-lg text-slate-900">Cheesman Park & Pavilion</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Expansive green lawns, jogging loops, and sweeping mountain skyline views just moments down Downing Street.
-                        </p>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Expansive green lawns, jogging loops, and sweeping mountain skyline views just moments down Downing Street.</p>
                     </div>
                 </div>
 
-                <!-- Image 2: Denver Botanic Gardens (Chihuly Sculpture) -->
+                <!-- Card 2: Botanic Gardens -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
                     <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="chahuli_denver_botanic_gardens.jpg" 
-                            alt="Denver Botanic Gardens Chihuly Glass Sculpture" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <img src="chahuli_denver_botanic_gardens.jpg" alt="Denver Botanic Gardens" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
                             <i class="fa-solid fa-leaf text-emerald-400 mr-1"></i> Botanic Gardens
                         </span>
                     </div>
                     <div class="p-5">
                         <h3 class="font-serif-title font-bold text-lg text-slate-900">Denver Botanic Gardens</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Explore world-class floral displays, tropical conservatories, and stunning seasonal art installations.
-                        </p>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Explore world-class floral displays, tropical conservatories, and stunning seasonal art installations.</p>
                     </div>
                 </div>
 
-                <!-- Image 3: Denver Capitol & City Lights -->
+                <!-- Card 3: State Capitol -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
                     <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="denver_capitol_lights.jpg" 
-                            alt="Denver Capitol Building Holiday City Lights" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <img src="denver_capitol_lights.jpg" alt="Colorado State Capitol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
                             <i class="fa-solid fa-building-columns text-amber-300 mr-1"></i> Capitol & Downtown
                         </span>
                     </div>
                     <div class="p-5">
                         <h3 class="font-serif-title font-bold text-lg text-slate-900">Colorado State Capitol</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Located blocks away in North Cap, offering iconic architecture and vibrant city holiday light traditions.
-                        </p>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Located blocks away in North Cap, offering iconic architecture and vibrant city holiday light traditions.</p>
                     </div>
                 </div>
 
-                <!-- Image 4: Coors Field Stadium -->
+                <!-- Card 4: Coors Field -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
                     <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="coorsfield-heidi-laursen.jpg" 
-                            alt="Coors Field Stadium Aerial View" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                        <img src="coorsfield-heidi-laursen.jpg" alt="Coors Field" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
                             <i class="fa-solid fa-baseball text-purple-300 mr-1"></i> Sports & Entertainment
                         </span>
                     </div>
                     <div class="p-5">
                         <h3 class="font-serif-title font-bold text-lg text-slate-900">Coors Field (LoDo)</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Catch Colorado Rockies games and summer concerts easily via quick bus ride, bike lane, or rideshare.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Image 5: Denver Art Museum Architecture -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
-                    <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="art_museum.jpg" 
-                            alt="Denver Art Museum Architecture" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
-                            <i class="fa-solid fa-palette text-purple-300 mr-1"></i> Arts & Culture
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-serif-title font-bold text-lg text-slate-900">Denver Art Museum</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Immerse yourself in world-renowned exhibits and modern architecture in the nearby Golden Triangle district.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Image 6: Cheesman Park Aerial Lake View -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-purple-100 group hover:shadow-xl transition-all">
-                    <div class="relative h-56 overflow-hidden bg-slate-900">
-                        <img 
-                            src="CO-Cheesman-Park-Restaurants-Denver.webp" 
-                            alt="Cheesman Park Aerial Lake View" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-slate-900/80 text-purple-200 text-xs font-medium backdrop-blur-sm">
-                            <i class="fa-solid fa-utensils text-amber-300 mr-1"></i> 17th Ave Dining
-                        </span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-serif-title font-bold text-lg text-slate-900">Uptown Dining & Parks</h3>
-                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Surrounded by local patio cafes, bakeries, coffee shops, and lush parklands along Downing St.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-slate-900 text-white relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-xs font-bold tracking-widest text-purple-300 uppercase">Prospective Tenants</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl font-bold mt-2">Get in Touch with Our Family Team</h2>
-                <p class="text-slate-300 text-sm mt-3 max-w-lg mx-auto">
-                    Fill out the inquiry form below for availability, questions, or to schedule a walk-through at 1530 Downing Street.
-                </p>
-            </div>
-
-            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
-                <form id="prospectiveTenantForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- Name Input -->
-                        <div>
-                            <label for="tenantName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                                Full Name <span class="text-purple-400">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="tenantName" 
-                                required 
-                                placeholder="e.g. Alex Morgan"
-                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
-                            >
-                        </div>
-
-                        <!-- Phone Number Input -->
-                        <div>
-                            <label for="tenantPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                                Phone Number <span class="text-purple-400">*</span>
-                            </label>
-                            <input 
-                                type="tel" 
-                                id="tenantPhone" 
-                                required 
-                                placeholder="e.g. (303) 555-0199"
-                                class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Email Input -->
-                    <div>
-                        <label for="tenantEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                            Email Address <span class="text-purple-400">*</span>
-                        </label>
-                        <input 
-                            type="email" 
-                            id="tenantEmail" 
-                            required 
-                            placeholder="e.g. alex@example.com"
-                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
-                        >
-                    </div>
-
-                    <!-- Message Input -->
-                    <div>
-                        <label for="tenantMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                            Message <span class="text-purple-400">*</span>
-                        </label>
-                        <textarea 
-                            id="tenantMessage" 
-                            rows="4" 
-                            required 
-                            placeholder="Tell us your target move-in date, bedroom preference, or any questions..."
-                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-all duration-200"
-                        ></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button 
-                        type="submit" 
-                        class="w-full py-4 rounded-xl bg-purpleTheme-primary hover:bg-purpleTheme-vibrant text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg border border-purple-500/30"
-                    >
-                        <i class="fa-solid fa-paper-plane"></i> Send Message to Owners
-                    </button>
-                </form>
-
-                <!-- Interactive Confirmation Message -->
-                <div id="formSuccessMessage" class="hidden text-center py-8 space-y-4">
-                    <div class="w-16 h-16 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/30 flex items-center justify-center text-3xl mx-auto">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <h3 class="font-serif-title text-2xl font-bold text-white">Thank You for Contacting Us!</h3>
-                    <p class="text-slate-300 text-sm max-w-md mx-auto" id="confirmationDetails">
-                        Your message has been delivered to our family team. We will respond promptly!
-                    </p>
-                    <button onclick="resetContactForm()" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-purple-200 transition-colors mt-4">
-                        Send Another Inquiry
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-7 h-7 rounded bg-purpleTheme-primary flex items-center justify-center font-serif-title text-white font-bold text-xs">
-                    1530
-                </div>
-                <div>
-                    <p class="font-serif-title font-bold text-slate-200">1530 Downing Street Apartments</p>
-                    <p class="text-[11px] text-slate-400">1530 Downing St, Denver, CO 80218</p>
-                </div>
-            </div>
-            <p class="text-[11px] text-slate-500">
-                © 2026 1530 Downing Street Residences. Family Owned & Operated. Equal Housing Opportunity.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        function handleContactSubmit(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('tenantName').value;
-            const email = document.getElementById('tenantEmail').value;
-
-            document.getElementById('prospectiveTenantForm').classList.add('hidden');
-            
-            const confirmBox = document.getElementById('formSuccessMessage');
-            document.getElementById('confirmationDetails').innerText = 
-                `Thank you ${name}! We received your inquiry and our family team will email you at ${email} shortly.`;
-            
-            confirmBox.classList.remove('hidden');
-        }
-
-        function resetContactForm() {
-            document.getElementById('prospectiveTenantForm').reset();
-            document.getElementById('prospectiveTenantForm').classList.remove('hidden');
-            document.getElementById('formSuccessMessage').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
+                        <p class="text-xs text-slate-600 mt-2 leading-relaxed">Catch Colorado Rockies games and summer concerts easily via quick bus ride, bike lane, or rides

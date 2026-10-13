@@ -60,7 +60,7 @@
 
             <!-- Consolidated Single CTA Button -->
             <a href="#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-md border border-purple-400/20 transition-all hover:scale-105">
-                Contact Leasing
+                Contact
             </a>
         </div>
     </header>
@@ -96,7 +96,7 @@
             <div class="mt-10 flex items-center justify-center">
                 <!-- Consolidated Primary Action Button -->
                 <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purpleTheme-primary hover:bg-purpleTheme-vibrant rounded-xl shadow-xl border border-purple-400/30 transition-all flex items-center justify-center gap-2 hover:scale-105">
-                    <i class="fa-solid fa-envelope"></i> Contact Leasing Office
+                    <i class="fa-solid fa-envelope"></i> Contact Office
                 </a>
             </div>
         </div>
@@ -120,26 +120,12 @@
                         At <strong class="text-purpleTheme-primary font-semibold">1530 Downing Street</strong>, we pride ourselves on offering a residence experience that larger corporate management firms simply cannot match. As a locally based, family-owned business, we care deeply about our building, our neighbors, and every individual tenant who calls this property home.
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                        <div class="p-5 rounded-2xl bg-purpleTheme-softBg border border-purple-100 flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-xl bg-purpleTheme-primary text-white flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                <i class="fa-solid fa-handshake font-bold"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-serif-title font-bold text-slate-900 text-base">Direct Communication</h3>
-                                <p class="text-xs text-slate-600 mt-1">Speak directly with owners who genuinely care about your comfort and satisfaction.</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 rounded-2xl bg-purpleTheme-softBg border border-purple-100 flex gap-4 items-start">
-                            <div class="w-10 h-10 rounded-xl bg-purpleTheme-primary text-white flex items-center justify-center text-lg shrink-0 shadow-sm">
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-serif-title font-bold text-slate-900 text-base">Attentive Maintenance</h3>
-                                <p class="text-xs text-slate-600 mt-1">Prompt, dedicated attention to repairs and property upkeep year-round.</p>
-                            </div>
-                        </div>
+                    <div class="pt-2">
+                        <img
+                            src="family%20photo.jpg"
+                            alt="The family that owns and operates 1530 Downing Street"
+                            class="w-full rounded-2xl shadow-lg border border-purple-100 object-cover object-center"
+                        >
                     </div>
                 </div>
 
@@ -156,10 +142,15 @@
                             Situated right on Downing Street between Colfax and 16th Avenue, you are in the heart of Denver's most vibrant, historic corridor with quick access to Cheesman Park, downtown, and public transport.
                         </p>
 
-                        <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-purple-300 font-medium">
-                            <span><i class="fa-solid fa-building text-purple-400"></i> Boutique Residence</span>
-                            <span><i class="fa-solid fa-paw text-purple-400"></i> Denver Living</span>
-                        </div>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=1530+Downing+St,+Denver,+CO+80218"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 pt-2 border-t border-slate-800 text-xs text-purple-300 font-medium hover:text-purple-200 transition-colors"
+                        >
+                            <i class="fa-solid fa-map-location-dot text-purple-400"></i>
+                            Open 1530 Downing St in Google Maps
+                        </a>
                     </div>
                 </div>
 
@@ -318,12 +309,14 @@
                 <span class="text-xs font-bold tracking-widest text-purple-300 uppercase">Prospective Tenants</span>
                 <h2 class="font-serif-title text-3xl sm:text-4xl font-bold mt-2">Get in Touch with Our Family Team</h2>
                 <p class="text-slate-300 text-sm mt-3 max-w-lg mx-auto">
-                    Fill out the inquiry form below for availability, questions, or to schedule a walk-through at 1530 Downing Street.
+                    Fill out the inquiry form below for availability, questions, or to schedule a walk-through at 1530 Downing Street. Messages are sent to marshahigproperties@gmail.com and johnkittelman@gmail.com.
                 </p>
             </div>
 
             <div class="bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
                 <form id="prospectiveTenantForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                    <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+                    <p id="formErrorMessage" class="hidden text-sm text-red-300 bg-red-950/60 border border-red-800 rounded-xl px-4 py-3"></p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Name Input -->
@@ -334,6 +327,7 @@
                             <input 
                                 type="text" 
                                 id="tenantName" 
+                                name="name"
                                 required 
                                 placeholder="e.g. Alex Morgan"
                                 class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
@@ -348,6 +342,7 @@
                             <input 
                                 type="tel" 
                                 id="tenantPhone" 
+                                name="phone"
                                 required 
                                 placeholder="e.g. (303) 555-0199"
                                 class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
@@ -363,6 +358,7 @@
                         <input 
                             type="email" 
                             id="tenantEmail" 
+                            name="email"
                             required 
                             placeholder="e.g. alex@example.com"
                             class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-400 transition-colors"
@@ -376,6 +372,7 @@
                         </label>
                         <textarea 
                             id="tenantMessage" 
+                            name="message"
                             rows="4" 
                             required 
                             placeholder="Tell us your target move-in date, bedroom preference, or any questions..."
@@ -386,7 +383,8 @@
                     <!-- Submit Button -->
                     <button 
                         type="submit" 
-                        class="w-full py-4 rounded-xl bg-purpleTheme-primary hover:bg-purpleTheme-vibrant text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg border border-purple-400/30 flex items-center justify-center gap-2 hover:scale-[1.01]"
+                        id="contactSubmitButton"
+                        class="w-full py-4 rounded-xl bg-purpleTheme-primary hover:bg-purpleTheme-vibrant text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg border border-purple-400/30 flex items-center justify-center gap-2 hover:scale-[1.01] disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                         <i class="fa-solid fa-paper-plane"></i> Send Message to Owners
                     </button>
@@ -427,22 +425,86 @@
     </footer>
 
     <script>
-        function handleContactSubmit(e) {
-            e.preventDefault();
+        const OWNER_EMAILS = ['marshahigproperties@gmail.com', 'johnkittelman@gmail.com'];
 
-            const name = document.getElementById('tenantName').value;
-            const email = document.getElementById('tenantEmail').value;
+        function showFormError(message) {
+            const errorBox = document.getElementById('formErrorMessage');
+            errorBox.textContent = message;
+            errorBox.classList.remove('hidden');
+        }
 
+        function hideFormError() {
+            const errorBox = document.getElementById('formErrorMessage');
+            errorBox.textContent = '';
+            errorBox.classList.add('hidden');
+        }
+
+        function showFormSuccess(name, email) {
             document.getElementById('prospectiveTenantForm').classList.add('hidden');
-            
-            const confirmBox = document.getElementById('formSuccessMessage');
-            document.getElementById('confirmationDetails').innerText = 
-                `Thank you ${name}! We received your inquiry and our family team will email you at ${email} shorty.`;
-            
-            confirmBox.classList.remove('hidden');
+            document.getElementById('confirmationDetails').innerText =
+                `Thank you ${name}! We received your inquiry and our family team will email you at ${email} shortly.`;
+            document.getElementById('formSuccessMessage').classList.remove('hidden');
+        }
+
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            hideFormError();
+
+            const name = document.getElementById('tenantName').value.trim();
+            const phone = document.getElementById('tenantPhone').value.trim();
+            const email = document.getElementById('tenantEmail').value.trim();
+            const message = document.getElementById('tenantMessage').value.trim();
+            const submitBtn = document.getElementById('contactSubmitButton');
+            const originalLabel = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            try {
+                const payload = {
+                    name,
+                    phone,
+                    email,
+                    message,
+                    _replyto: email,
+                    _subject: 'New inquiry from 1530 Downing Street website',
+                    _template: 'table',
+                    _captcha: 'false'
+                };
+
+                const results = await Promise.all(OWNER_EMAILS.map(async (ownerEmail) => {
+                    const response = await fetch(`https://formsubmit.co/ajax/${ownerEmail}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    const result = await response.json().catch(() => ({}));
+                    return response.ok && result.success !== 'false' && result.success !== false;
+                }));
+
+                if (!results.some(Boolean)) {
+                    throw new Error('Unable to send message');
+                }
+
+                showFormSuccess(name, email);
+            } catch (err) {
+                const subject = encodeURIComponent('New inquiry from 1530 Downing Street website');
+                const body = encodeURIComponent(
+                    `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
+                );
+                window.location.href = `mailto:${OWNER_EMAILS.join(',')}?subject=${subject}&body=${body}`;
+                showFormError('If your email app did not open, please send your inquiry directly to ' + OWNER_EMAILS.join(' and ') + '.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalLabel;
+            }
         }
 
         function resetContactForm() {
+            hideFormError();
             document.getElementById('prospectiveTenantForm').reset();
             document.getElementById('prospectiveTenantForm').classList.remove('hidden');
             document.getElementById('formSuccessMessage').classList.add('hidden');
