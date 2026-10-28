@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downing Place Apartments | 1530 Downing Street</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', Georgia, serif; }
+        nav details summary { list-style: none; }
+        nav details summary::-webkit-details-marker { display: none; }
+        .photo-gallery {
+            scrollbar-width: thin;
+            scrollbar-color: #7e22ce #ede9fe;
+        }
+        .photo-gallery::-webkit-scrollbar { height: 8px; }
+        .photo-gallery::-webkit-scrollbar-thumb { background: #7e22ce; border-radius: 999px; }
+        .photo-gallery::-webkit-scrollbar-track { background: #ede9fe; border-radius: 999px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- ======================================================================= -->
+    <!-- TOP NAV: logo goes home. Open Listings is a dropdown.                   -->
+    <!-- ======================================================================= -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-purple-900/40 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-700 flex items-center justify-center font-serif-title font-bold text-lg text-white shadow-md">HIG</div>
+                <div class="flex flex-col">
+                    <span class="font-serif-title text-lg font-bold tracking-wider text-purple-100 uppercase leading-none">HIG Properties</span>
+                    <span class="text-[10px] tracking-[0.2em] text-purple-300 uppercase font-medium mt-1">Denver, CO</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+                <a href="index.html" class="hover:text-purple-300 transition-colors">Home</a>
+                <details class="relative">
+                    <summary class="cursor-pointer hover:text-purple-300 text-purple-300 inline-flex items-center gap-2">
+                        Open Listings <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </summary>
+                    <div class="absolute left-0 top-full pt-2 z-50">
+                        <div class="bg-slate-900 border border-purple-900/40 rounded-xl shadow-xl py-2 min-w-[240px]">
+                            <a href="listing-1530.html" class="block px-4 py-2.5 text-purple-200 bg-purple-800/40">1530 Downing — Apartments</a>
+                            <a href="listing-1540.html" class="block px-4 py-2.5 hover:bg-purple-800/40 hover:text-white">1540 Downing — House</a>
+                        </div>
+                    </div>
+                </details>
+                <a href="index.html#about" class="hover:text-purple-300 transition-colors">About Us</a>
+                <a href="index.html#neighborhood" class="hover:text-purple-300 transition-colors">Neighborhood</a>
+            </nav>
+
+            <a href="index.html#contact" class="px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-md transition-colors">
+                Contact
+            </a>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-10 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-300 hover:text-purple-200">
+                <i class="fa-solid fa-arrow-left"></i> Back to HIG Properties
+            </a>
+            <p class="text-xs font-bold tracking-widest text-purple-300 uppercase mt-4">Open Listing</p>
+            <h1 class="font-serif-title text-4xl sm:text-5xl font-bold mt-2">Downing Place Apartments</h1>
+            <p class="text-slate-300 mt-3">1530 Downing Street, Denver, CO 80218</p>
+        </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- 1530 DETAILS                                                            -->
+    <!-- Edit amenities, utilities, and photos below.                            -->
+    <!-- ======================================================================= -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="space-y-4">
+                    <img src="IMG_2284.JPEG" alt="Downing Place Apartments at 1530 Downing Street" class="w-full h-80 object-cover rounded-3xl shadow-lg">
+                    <img src="1530-n-downing-st-parking.jpg" alt="Off-street parking at 1530 Downing Street" class="w-full h-56 object-cover object-top rounded-2xl">
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-xs font-bold uppercase tracking-wider text-purple-700">Apartment Building • 19 Units</p>
+                    <h2 class="font-serif-title text-3xl font-bold text-slate-900">1530 Downing Street at Colfax Avenue</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Downing Place Apartments in the historic Denver Capitol Hill. Downing Street and Colfax Avenue. Entrance to the front of the building is controlled by an electronic security system. Our small family owned and operated three level smoke free property contains 19 units with studio, one bedroom and two bedroom apartments.
+                    </p>
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Utilities</h3>
+                        <p class="text-slate-600 leading-relaxed mt-2">
+                            2025 minimum monthly bill was $61, maximum $86 (trash, water/sewer, gas). Xcel metered electricity (refrigerator, lights, personal electronics, etc.) is paid by the tenant.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Amenities</h3>
+                        <ul class="space-y-2 text-sm text-slate-700 mt-2">
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Spacious exercise room</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Laundry facility for tenants</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Secured sports equipment storage for large items such as a bike</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Electronic security system at the front entrance</li>
+                            <li><i class="fa-solid fa-check text-purple-700 mr-2"></i>Smoke-free three-level building</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-serif-title text-xl font-bold text-slate-900">Parking</h3>
+                        <p class="text-slate-600 leading-relaxed mt-2">
+                            Off-street parking is available alongside the building. Six months free off-street parking per vehicle.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=1530+Downing+St,+Denver,+CO+80218" target="_blank" rel="noopener noreferrer" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-purple-800 bg-purple-100 hover:bg-purple-200 rounded-xl">
+                            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                        </a>
+                        <a href="index.html#contact" class="px-5 py-3 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl">
+                            <i class="fa-solid fa-envelope"></i> Inquire about 1530
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================== -->
+            <!-- PHOTO GALLERY — copy an <img> line below to add another photo       -->
+            <!-- =================================================================== -->
+            <div class="mt-14">
+                <div class="flex items-end justify-between gap-4 mb-4">
+                    <div>
+                        <h3 class="font-serif-title text-2xl font-bold text-slate-900">Photo gallery</h3>
+                        <p class="text-sm text-slate-500 mt-1">Scroll sideways to see all 1530 Downing Street photos.</p>
+                    </div>
+                    <div class="flex gap-2 shrink-0">
+                        <button type="button" id="galleryPrev" aria-label="Scroll gallery left" class="w-10 h-10 rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button" id="galleryNext" aria-label="Scroll gallery right" class="w-10 h-10 rounded-full bg-purple-700 text-white hover:bg-purple-600">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="photoGallery" class="photo-gallery flex gap-4 overflow-x-auto snap-x snap-mandatory pb-3 scroll-smooth">
+                    <img src="IMG_2284.JPEG" alt="1530 Downing Street photo 2284" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2285.JPEG" alt="1530 Downing Street photo 2285" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2287.JPEG" alt="1530 Downing Street photo 2287" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2288.JPEG" alt="1530 Downing Street photo 2288" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2290.JPEG" alt="1530 Downing Street photo 2290" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2291.JPEG" alt="1530 Downing Street photo 2291" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2293.JPEG" alt="1530 Downing Street photo 2293" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2295.JPEG" alt="1530 Downing Street photo 2295" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2296.JPEG" alt="1530 Downing Street photo 2296" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2297.JPEG" alt="1530 Downing Street photo 2297" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2298.JPEG" alt="1530 Downing Street photo 2298" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                    <img src="IMG_2301.JPEG" alt="1530 Downing Street photo 2301" class="h-72 w-auto max-w-[85vw] shrink-0 rounded-2xl snap-start shadow-md object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="index.html" class="font-serif-title font-bold text-slate-200 hover:text-white">HIG Properties</a>
+            <p class="text-[11px] text-slate-500">© 2026 HIG Properties. Equal Housing Opportunity.</p>
+        </div>
+    </footer>
+
+    <script>
+        const gallery = document.getElementById('photoGallery');
+        document.getElementById('galleryPrev').addEventListener('click', function () {
+            gallery.scrollBy({ left: -360, behavior: 'smooth' });
+        });
+        document.getElementById('galleryNext').addEventListener('click', function () {
+            gallery.scrollBy({ left: 360, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

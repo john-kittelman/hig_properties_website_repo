@@ -16,6 +16,8 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif-title { font-family: 'Playfair Display', Georgia, serif; }
+        nav details summary { list-style: none; }
+        nav details summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -23,7 +25,7 @@
     <!-- ======================================================================= -->
     <!-- NAVIGATION BAR                                                          -->
     <!-- Edit the text inside each <a> to rename a tab.                          -->
-    <!-- href="#about" jumps down this page. href="listings.html" opens a page.  -->
+    <!-- href="#about" jumps down this page. Open Listings is a dropdown menu.   -->
     <!-- ======================================================================= -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-purple-900/40 text-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -41,7 +43,17 @@
 
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
                 <a href="#hero" class="hover:text-purple-300 transition-colors">Home</a>
-                <a href="listings.html" class="hover:text-purple-300 transition-colors">Open Listings</a>
+                <details class="relative">
+                    <summary class="cursor-pointer hover:text-purple-300 inline-flex items-center gap-2">
+                        Open Listings <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </summary>
+                    <div class="absolute left-0 top-full pt-2 z-50">
+                        <div class="bg-slate-900 border border-purple-900/40 rounded-xl shadow-xl py-2 min-w-[240px]">
+                            <a href="listing-1530.html" class="block px-4 py-2.5 hover:bg-purple-800/40 hover:text-white">1530 Downing — Apartments</a>
+                            <a href="listing-1540.html" class="block px-4 py-2.5 hover:bg-purple-800/40 hover:text-white">1540 Downing — House</a>
+                        </div>
+                    </div>
+                </details>
                 <a href="#about" class="hover:text-purple-300 transition-colors">About Us</a>
                 <a href="#neighborhood" class="hover:text-purple-300 transition-colors">Neighborhood</a>
             </nav>
@@ -60,7 +72,7 @@
     <section id="hero" class="relative min-h-screen flex items-center justify-center bg-slate-950 text-white pt-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img 
-                src="1530-n-downing-st.jpg" 
+                src="IMG_2284.JPEG" 
                 alt="HIG Properties Denver rentals" 
                 class="w-full h-full object-cover object-center"
             >
@@ -81,7 +93,7 @@
             </p>
 
             <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
-                <a href="listings.html" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-xl transition-colors">
+                <a href="#listings" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-white bg-purple-700 hover:bg-purple-600 rounded-xl shadow-xl transition-colors">
                     <i class="fa-solid fa-key"></i> View Open Listings
                 </a>
                 <a href="#contact" class="px-8 py-4 text-xs font-bold uppercase tracking-wider text-purple-100 bg-slate-900/70 hover:bg-slate-900 rounded-xl shadow-xl border border-purple-400/30 transition-colors">
@@ -95,7 +107,7 @@
     <!-- OPEN LISTINGS PREVIEW                                                   -->
     <!-- This section shows currently available rentals.                         -->
     <!-- To add a third listing, copy one of the two cards and change the text.  -->
-    <!-- The "View listing" buttons open listings.html at that property.         -->
+    <!-- The "View listing" cards open listing-1530.html or listing-1540.html.   -->
     <!-- ======================================================================= -->
     <section id="listings" class="py-24 bg-white border-b border-purple-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,10 +122,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- LISTING CARD: 1530 Downing apartments -->
-                <a href="listings.html#listing-1530" class="bg-white rounded-3xl overflow-hidden shadow-md border border-purple-100 hover:shadow-xl transition-all group">
-                    <!-- PHOTO: 1530-n-downing-st.jpg (building front) -->
+                <a href="listing-1530.html" class="bg-white rounded-3xl overflow-hidden shadow-md border border-purple-100 hover:shadow-xl transition-all group">
+                    <!-- PHOTO: IMG_2284.jpeg (building front) -->
                     <img
-                        src="1530-n-downing-st.jpg"
+                        src="IMG_2284.JPEG"
                         alt="Downing Place Apartments at 1530 Downing Street"
                         class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                     >
@@ -127,7 +139,7 @@
                 </a>
 
                 <!-- LISTING CARD: 1540 Downing house -->
-                <a href="listings.html#listing-1540" class="bg-white rounded-3xl overflow-hidden shadow-md border border-purple-100 hover:shadow-xl transition-all group">
+                <a href="listing-1540.html" class="bg-white rounded-3xl overflow-hidden shadow-md border border-purple-100 hover:shadow-xl transition-all group">
                     <!-- PHOTO: 1540 (2).jpeg (house from the street) -->
                     <img
                         src="1540%20(2).jpeg"
